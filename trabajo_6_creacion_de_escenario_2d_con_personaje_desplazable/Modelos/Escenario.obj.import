@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cahv54b6htuk7"
+path="res://.godot/imported/Escenario.obj-a8c449a79bbf8dd8c4e33bcf31160383.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Escenario.obj-a8c449a79bbf8dd8c4e33bcf31160383.mesh"]
+
+source_file="res://Modelos/Escenario.obj"
+dest_files=["res://.godot/imported/Escenario.obj-a8c449a79bbf8dd8c4e33bcf31160383.mesh", "res://.godot/imported/Escenario.obj-a8c449a79bbf8dd8c4e33bcf31160383.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

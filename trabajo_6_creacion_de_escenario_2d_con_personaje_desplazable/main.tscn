@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm0q7o44ekicd"]
+
+[ext_resource type="ArrayMesh" uid="uid://cjo68t884n70h" path="res://Modelos/Trabajo_03_Replicacr_escenario_de_crossy_road.obj" id="1_la60m"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bp183"]
+size = Vector3(73, 1, 52)
+
+[node name="Main" type="Node"]
+
+[node name="Group" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Group"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 10)
+shape = SubResource("BoxShape3D_bp183")
+
+[node name="Escenario" type="MeshInstance3D" parent="Group"]
+mesh = ExtResource("1_la60m")
+skeleton = NodePath("../..")
