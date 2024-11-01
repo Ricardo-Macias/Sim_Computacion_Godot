@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dio7lvb48g23t"]
+
+[ext_resource type="PackedScene" uid="uid://d1rj6ggshkmm7" path="res://Modelos/Carro.glb" id="1_o3xgs"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pphvu"]
+size = Vector3(3, 4, 8.7)
+
+[node name="Car" type="CharacterBody3D"]
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Carro" parent="Pivot" instance=ExtResource("1_o3xgs")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.69024, -0.126753)
+shape = SubResource("BoxShape3D_pphvu")

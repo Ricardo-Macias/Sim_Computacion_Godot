@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8stq2xf33en0"]
+
+[ext_resource type="PackedScene" uid="uid://bacds1g6pesqe" path="res://Modelos/Tronco.glb" id="1_gki3g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sxxac"]
+size = Vector3(10.8, 1, 1.2)
+
+[node name="Tronco" type="CharacterBody3D"]
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Tronco" parent="Node3D" instance=ExtResource("1_gki3g")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0166988, 0.0261765, 0)
+shape = SubResource("BoxShape3D_sxxac")
