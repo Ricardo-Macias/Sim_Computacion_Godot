@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cm0q7o44ekicd"]
+[gd_scene load_steps=4 format=3 uid="uid://cm0q7o44ekicd"]
 
-[ext_resource type="ArrayMesh" uid="uid://cjo68t884n70h" path="res://Modelos/Trabajo_03_Replicacr_escenario_de_crossy_road.obj" id="1_la60m"]
+[ext_resource type="ArrayMesh" uid="uid://cahv54b6htuk7" path="res://Modelos/Escenario.obj" id="1_2lrln"]
+[ext_resource type="PackedScene" uid="uid://b6mvoi753l1vh" path="res://player.tscn" id="2_2cd2w"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_bp183"]
 size = Vector3(73, 1, 52)
@@ -10,9 +11,17 @@ size = Vector3(73, 1, 52)
 [node name="Group" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Group"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 10)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -18)
 shape = SubResource("BoxShape3D_bp183")
 
 [node name="Escenario" type="MeshInstance3D" parent="Group"]
-mesh = ExtResource("1_la60m")
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+mesh = ExtResource("1_2lrln")
 skeleton = NodePath("../..")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.0502282, 0.943078, 0.328756, -0.523003, -0.255593, 0.813106, 0.85085, -0.212781, 0.480394, 1.19109, 33.5587, 29.0815)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("2_2cd2w")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.298959, 0, 14.1904)
